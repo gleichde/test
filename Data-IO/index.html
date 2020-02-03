@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Data I/O - MISCnn wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Data I/O";
+    var mkdocs_page_input_path = "Data-IO.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> MISCnn wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Home/">What is MIScnn?</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Install/">Install</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Usage/">Basic Usage</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Tutorials/">Tutorials</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Examples/">Examples</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Documentation - Core</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Data I/O</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#methods">Methods</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#initialization">Initialization</a></li>
+        
+            <li><a class="toctree-l4" href="#get_indiceslist">get_indiceslist</a></li>
+        
+            <li><a class="toctree-l4" href="#sample_loader">sample_loader</a></li>
+        
+            <li><a class="toctree-l4" href="#save_prediction">save_prediction</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Preprocessor/">Preprocessor</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data-Augmentation/">Data Augmentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Model/">Neural Network Model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Validation/">Validation Techniques</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Documentation - Interfaces</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Architectures/">Architectures</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Metrics/">Metrics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Subfunctions/">Subfunctions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../IO-Interfaces/">I/O Interfaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Documentation - Extras</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Sample/">Sample</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Contribute/">How to Contribute</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Credits/">Author and Contacts</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">MISCnn wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Documentation - Core &raquo;</li>
+        
+      
+    
+    <li>Data I/O</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This class provides functionality for handling all input and output processes of the imaging data, as well as the temporary backup of batches to the disk. The Data I/O class is the gateway into the MIScnn pipeline and therefore one of the four core classes in MIScnn.</p>
+<p>The user is only required to create an instance of the Data IO class with the desired specifications and IO interface for the correct format. It is possible to create a custom IO interface for handling special data structures or formats.</p>
+<h2 id="methods">Methods</h2>
+<h4 id="initialization">Initialization</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Data_IO</span><span class="p">(</span><span class="n">interface</span><span class="p">,</span> <span class="n">input_path</span><span class="p">,</span> <span class="n">output_path</span><span class="o">=</span><span class="s2">&quot;predictions&quot;</span><span class="p">,</span>
+        <span class="n">batch_path</span><span class="o">=</span><span class="s2">&quot;batches&quot;</span><span class="p">,</span> <span class="n">delete_batchDir</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Initialization function for creating an object of the Data IO class.</p>
+<p><strong>Arguments:</strong><br />
+- <strong>interface:</strong> Data I/O interface object.
+- <strong>input_path:</strong> Path to the input image data directory (passed to Data I/O interface object).
+- <strong>output_path:</strong> Path to the output directory for predictions (passed to Data I/O interface object).
+- <strong>batch_path:</strong> Path to the directory for temporary files like batches or preprocessing files.
+- <strong>delete_batchDir:</strong> Boolean, whether the temporary batch directory should be deleted, afterwards.</p>
+<p><strong>Returns:</strong><br />
+A Data_IO class object. Have to be passed to the Preprocessor class and can be used to access the sample list.</p>
+<p><strong>Example:</strong>  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create a Data I/O interface for kidney tumor CT scans in NIfTI format</span>
+<span class="kn">from</span> <span class="nn">miscnn.data_loading.interfaces</span> <span class="kn">import</span> <span class="n">NIFTI_interface</span>
+<span class="n">interface</span> <span class="o">=</span> <span class="n">NIFTI_interface</span><span class="p">(</span><span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;case_000[0-9]*&quot;</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Initialize data path and create the Data I/O instance</span>
+<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;/home/mudomini/projects/KITS_challenge2019/kits19/data.original/&quot;</span>
+<span class="n">data_io</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Data_IO</span><span class="p">(</span><span class="n">interface</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h4 id="get_indiceslist">get_indiceslist</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">get_indiceslist</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+
+<p>Return a list of indices for all available samples</p>
+<p><strong>Arguments:</strong> None</p>
+<p><strong>Returns:</strong><br />
+List of indices (Strings)</p>
+<p><strong>Example:</strong>  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">sample_list</span> <span class="o">=</span> <span class="n">data_io</span><span class="o">.</span><span class="n">get_indiceslist</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="c1"># [&#39;case_00000&#39;, &#39;case_00001&#39;, &#39;case_00002&#39;]</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h4 id="sample_loader">sample_loader</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">sample_loader</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">load_seg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">load_pred</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Load a sample class object given a valid sample index.</p>
+<p><strong>Arguments:</strong>
+- <strong>index:</strong> Index (String) of a sample.
+- <strong>load_seg:</strong> Boolean, whether the segmentation should be loaded, as well.
+- <strong>load_pred:</strong> Boolean, whether the prediction should be loaded, as well.
+- <strong>backup:</strong> Boolean, whether the sample file should be created from an original image or loaded from a temporary backup file.</p>
+<p><strong>Returns:</strong><br />
+A sample class object.</p>
+<p><strong>Example:</strong>  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="s2">&quot;case_00000&quot;</span>
+<span class="n">sample</span> <span class="o">=</span> <span class="n">data_io</span><span class="o">.</span><span class="n">sample_loader</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">load_seg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h4 id="save_prediction">save_prediction</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">save_prediction</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Save a segmentation prediction into a file.</p>
+<p><strong>Arguments:</strong>
+- <strong>pred:</strong> NumPy array containing a prediction.
+- <strong>index:</strong> Index (String) of a sample.</p>
+<p><strong>Returns:</strong><br />
+None</p>
+<p><strong>Example:</strong>  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="s2">&quot;case_00000&quot;</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">index</span><span class="p">],</span> <span class="n">direct_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">data_io</span><span class="o">.</span><span class="n">save_prediction</span><span class="p">(</span><span class="n">prediction</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Preprocessor/" class="btn btn-neutral float-right" title="Preprocessor">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Examples/" class="btn btn-neutral" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+  <p> <a href="/Home/">Home</a> | <a href="/Install/">Installation</a> | <a href="/Usage/">Usage</a> | <a href="/Examples/">Examples</a> | <a href="/Credits/">Contact</a></p>
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Examples/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Preprocessor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Basic Usage - MISCnn wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Basic Usage";
+    var mkdocs_page_input_path = "Usage.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> MISCnn wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Home/">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Home/">What is MIScnn?</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Install/">Install</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Basic Usage</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#core-steps-of-the-miscnn-pipeline">Core steps of the MIScnn pipeline</a></li>
+    
+
+    <li class="toctree-l3"><a href="#workflow-of-miscnn">Workflow of MIScnn</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#import-the-miscnn-module">Import the MIScnn Module</a></li>
+        
+            <li><a class="toctree-l4" href="#1-data-io">1) Data I/O</a></li>
+        
+            <li><a class="toctree-l4" href="#2-preprocessor">2) Preprocessor</a></li>
+        
+            <li><a class="toctree-l4" href="#3-neural-network-model">3) Neural Network Model</a></li>
+        
+            <li><a class="toctree-l4" href="#4-results">4) Results</a></li>
+        
+            <li><a class="toctree-l4" href="#complete-code">Complete Code</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Tutorials/">Tutorials</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Examples/">Examples</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Documentation - Core</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Data-IO/">Data I/O</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Preprocessor/">Preprocessor</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Data-Augmentation/">Data Augmentation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Model/">Neural Network Model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Validation/">Validation Techniques</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Documentation - Interfaces</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Architectures/">Architectures</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Metrics/">Metrics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Subfunctions/">Subfunctions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../IO-Interfaces/">I/O Interfaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Documentation - Extras</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Sample/">Sample</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Other</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Contribute/">How to Contribute</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Credits/">Author and Contacts</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">MISCnn wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Getting Started &raquo;</li>
+        
+      
+    
+    <li>Basic Usage</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="core-steps-of-the-miscnn-pipeline">Core steps of the MIScnn pipeline</h2>
+<p>The MIScnn pipeline is represented by 4 core classes:</p>
+<ul>
+<li>Data I/O  </li>
+<li>Data Augmentation (optional)</li>
+<li>Preprocessor</li>
+<li>Neural Network Model</li>
+</ul>
+<p>These classes handle all required steps for medical image segmentation and can be extensively customized. All classes, except the Data Augmentation class, use switchable interfaces which results into high configurability and offers simple integration of user-defined solutions.</p>
+<p><img alt="alt-text" src="https://raw.githubusercontent.com/frankkramer-lab/MIScnn/master/docs/MIScnn.basic_usage.png" /></p>
+<h2 id="workflow-of-miscnn">Workflow of MIScnn</h2>
+<h4 id="import-the-miscnn-module">Import the MIScnn Module</h4>
+<p>Before constructing our Medical Image Segmentation pipeline, we are going to import the MIScnn modules which will provide our core classes and functions.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">miscnn</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="1-data-io">1) Data I/O</h4>
+<p>The first step in the MIScnn pipeline is to establish the Data I/O class. The Data I/O handles the complete data loading of biomedical images, its segmentation and storage of predicted files, as well as temporary files like batches.</p>
+<p>In order to open the MIScnn pipeline for a various data formats and structures, the data I/O class uses switchable I/O interfaces. It is possible to use already provided I/O interfaces with a fixed data structure or custom I/O interfaces for integration of your specific data structure into the MIScnn pipeline.</p>
+<p>Before initializing an instance of the Data I/O class, we have to select an I/O interface. This interface have to load our data set into the MIScnn pipeline. In our example, we are using the KiTS19 data set which are kidney tumor CT scans encoded in the NIfTI format. Therefore, we call the provided NIfTI interface with a single channel (grayscale image) and 3 classes for the segmentation (background, kidney and tumor).</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">miscnn.data_loading.interfaces.nifti_io</span> <span class="kn">import</span> <span class="n">NIFTI_interface</span>
+
+<span class="n">interface</span> <span class="o">=</span> <span class="n">NIFTI_interface</span><span class="p">(</span><span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;case_000[0-9]*&quot;</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Afterwards, we can initialize the Data I/O class by passing our newly created interface and the path to the data set to the constructor.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;/home/mudomini/projects/kits19/data/&quot;</span>
+<span class="n">data_io</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Data_IO</span><span class="p">(</span><span class="n">interface</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="2-preprocessor">2) Preprocessor</h4>
+<p>Finally, we can initialize the Preprocessor class.</p>
+<p>Therefore, we are passing our Data I/O Interface to the Preprocessor initialization. Additionally, we configure our Preprocessor to create batches on-the-fly (preprare_batches=False) by random cropping patches with size 80x160x160 out of the image.
+Also a batch should contain 2 patches.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create and configure the Preprocessor class</span>
+<span class="n">pp</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Preprocessor</span><span class="p">(</span><span class="n">data_io</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">analysis</span><span class="o">=</span><span class="s2">&quot;patchwise-crop&quot;</span><span class="p">,</span>
+                         <span class="n">patch_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">160</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+
+<h6 id="specefic-data-augmentation">Specefic Data Augmentation</h6>
+<p>If you want to specify the Data Augmentation, it is possible to configure the Data Augmentation class.
+A Preprocessor object with default parameters automatically initialize a Data Augmentation class with default values, but here we initialize it by hand to illustrate the exact workflow of the MIScnn pipeline.</p>
+<p>The parameters for the Data Augmentation configure which augmentation techniques should be applied to the data set.
+In this case, we are using all possible augmentation techniques in order to run extensive data augmentation and avoid overfitting</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create and configure the Data Augmentation class</span>
+<span class="n">data_aug</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Data_Augmentation</span><span class="p">(</span><span class="n">cycles</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">scaling</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rotations</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">elastic_deform</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">brightness</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">contrast</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">gamma</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">gaussian_noise</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Create and configure the Preprocessor class</span>
+<span class="n">pp</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Preprocessor</span><span class="p">(</span><span class="n">data_io</span><span class="p">,</span> <span class="n">data_aug</span><span class="o">=</span><span class="n">data_aug</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                        <span class="n">analysis</span><span class="o">=</span><span class="s2">&quot;patchwise-crop&quot;</span><span class="p">,</span> <span class="n">patch_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">160</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="3-neural-network-model">3) Neural Network Model</h4>
+<p>Now it's time to initialize our final object: The Neural Network.</p>
+<p>With the Neural Network class, we are able to run training and prediction operations. But before, we have to decide which Neural Network Architecture and Metric we want to use.<br />
+In order to show the simplicity and performance of MIScnn, we stick with the simple 3D U-Net Architecture for our Neural Network without any special tricks or optimizations. For training, we are using the Soft Dice as loss.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import standard U-Net architecture and Soft Dice</span>
+<span class="kn">from</span> <span class="nn">miscnn.neural_network.architecture.unet.standard</span> <span class="kn">import</span> <span class="n">Architecture</span>
+<span class="kn">from</span> <span class="nn">miscnn.neural_network.metrics</span> <span class="kn">import</span> <span class="n">dice_soft</span>
+<span class="n">unet_standard</span> <span class="o">=</span> <span class="n">Architecture</span><span class="p">()</span>
+
+<span class="c1"># Create a deep learning neural network model with a standard U-Net architecture</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">=</span><span class="n">pp</span><span class="p">,</span> <span class="n">architecture</span><span class="o">=</span><span class="n">unet_standard</span><span class="p">,</span>
+                              <span class="n">loss</span><span class="o">=</span><span class="n">dice_soft</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now, let's run a model training on our data set for 500 epochs and, afterwards, predict the segmentation of a sample using the fitted model.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Training the model with 80 samples for 500 epochs</span>
+<span class="n">sample_list</span> <span class="o">=</span> <span class="n">data_io</span><span class="o">.</span><span class="n">get_indiceslist</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">30</span><span class="p">:</span><span class="mi">120</span><span class="p">],</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Predict the segmentation of 20 samples</span>
+<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">30</span><span class="p">])</span>
+</pre></div>
+</td></tr></table>
+
+<p>The predicted segmentation results will be passed to the Data I/O interface with the function save_prediction. The already implemented interfaces (like NiFTI interface) will store the predictions into files.</p>
+<h4 id="4-results">4) Results</h4>
+<p>We used our fitted U-Net model and successfully predicted a segmentation for our Kidney Tumor CT image.<br />
+But how do we know, how good our segmentation is compared to the ground-truth?</p>
+<p>We have the possibility to calculate several different scores (like the already implemented variants of the Dice Similarity Coefficient), but for simplicity, we want to compare it manually by eye. MIScnn provides a simple function to create comparison images (and for 3D data GIFs).</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Load the sample</span>
+<span class="n">sample</span> <span class="o">=</span> <span class="n">data_io</span><span class="o">.</span><span class="n">sample_loader</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">load_seg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">load_pred</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Access image, truth and predicted segmentation data</span>
+<span class="n">img</span><span class="p">,</span> <span class="n">seg</span><span class="p">,</span> <span class="n">pred</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">img_data</span><span class="p">,</span> <span class="n">sample</span><span class="o">.</span><span class="n">seg_data</span><span class="p">,</span> <span class="n">sample</span><span class="o">.</span><span class="n">pred_data</span>
+<span class="c1"># Visualize the truth and prediction segmentation as a GIF</span>
+<span class="kn">from</span> <span class="nn">miscnn.utils.visualizer</span> <span class="kn">import</span> <span class="n">visualize_evaluation</span>
+<span class="n">visualize_evaluation</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">img</span><span class="p">,</span> <span class="n">seg</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="s2">&quot;plot_directory/&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p><img alt="alt-text" src="https://raw.githubusercontent.com/frankkramer-lab/MIScnn/master/docs/visualization.case_case_00024.gif" /></p>
+<h4 id="complete-code">Complete Code</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">miscnn</span>
+
+<span class="c1"># Initialize the NIfTI I/O interface and configure the images as one channel (grayscale)</span>
+<span class="c1"># and three segmentation classes (background, kidney, tumor)</span>
+<span class="kn">from</span> <span class="nn">miscnn.data_loading.interfaces.nifti_io</span> <span class="kn">import</span> <span class="n">NIFTI_interface</span>
+<span class="n">interface</span> <span class="o">=</span> <span class="n">NIFTI_interface</span><span class="p">(</span><span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;case_000[0-9]*&quot;</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                            <span class="n">classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Create the Data I/O object</span>
+<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;/home/mudomini/projects/kits19/data/&quot;</span>
+<span class="n">data_io</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Data_IO</span><span class="p">(</span><span class="n">interface</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
+
+<span class="c1"># Create and configure the Data Augmentation class</span>
+<span class="n">data_aug</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Data_Augmentation</span><span class="p">(</span><span class="n">cycles</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">scaling</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rotations</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">elastic_deform</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mirror</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">brightness</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">contrast</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">gamma</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">gaussian_noise</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Create and configure the Preprocessor class</span>
+<span class="n">pp</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Preprocessor</span><span class="p">(</span><span class="n">data_io</span><span class="p">,</span> <span class="n">data_aug</span><span class="o">=</span><span class="n">data_aug</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                         <span class="n">analysis</span><span class="o">=</span><span class="s2">&quot;patchwise-crop&quot;</span><span class="p">,</span> <span class="n">patch_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">160</span><span class="p">))</span>
+
+<span class="c1"># Import standard U-Net architecture and Soft Dice</span>
+<span class="kn">from</span> <span class="nn">miscnn.neural_network.architecture.unet.standard</span> <span class="kn">import</span> <span class="n">Architecture</span>
+<span class="kn">from</span> <span class="nn">miscnn.neural_network.metrics</span> <span class="kn">import</span> <span class="n">dice_soft</span>
+<span class="n">unet_standard</span> <span class="o">=</span> <span class="n">Architecture</span><span class="p">()</span>
+
+<span class="c1"># Create a deep learning neural network model with a standard U-Net architecture</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">=</span><span class="n">pp</span><span class="p">,</span> <span class="n">architecture</span><span class="o">=</span><span class="n">unet_standard</span><span class="p">,</span>
+                              <span class="n">loss</span><span class="o">=</span><span class="n">dice_soft</span><span class="p">)</span>
+
+<span class="c1"># Training the model with 80 samples for 500 epochs</span>
+<span class="n">sample_list</span> <span class="o">=</span> <span class="n">data_io</span><span class="o">.</span><span class="n">get_indiceslist</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">80</span><span class="p">],</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Predict the segmentation of 20 samples</span>
+<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">80</span><span class="p">:</span><span class="mi">100</span><span class="p">])</span>
+
+<span class="c1"># Load the sample</span>
+<span class="n">sample</span> <span class="o">=</span> <span class="n">data_io</span><span class="o">.</span><span class="n">sample_loader</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">80</span><span class="p">],</span> <span class="n">load_seg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">load_pred</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Access image, truth and predicted segmentation data</span>
+<span class="n">img</span><span class="p">,</span> <span class="n">seg</span><span class="p">,</span> <span class="n">pred</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">img_data</span><span class="p">,</span> <span class="n">sample</span><span class="o">.</span><span class="n">seg_data</span><span class="p">,</span> <span class="n">sample</span><span class="o">.</span><span class="n">pred_data</span>
+<span class="c1"># Visualize the truth and prediction segmentation as a GIF</span>
+<span class="kn">from</span> <span class="nn">miscnn.utils.visualizer</span> <span class="kn">import</span> <span class="n">visualize_evaluation</span>
+<span class="n">visualize_evaluation</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">80</span><span class="p">],</span> <span class="n">img</span><span class="p">,</span> <span class="n">seg</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="s2">&quot;plot_directory/&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<p>For more detailed coding examples, check out the MIScnn wiki for
+<a href="https://github.com/frankkramer-lab/MIScnn/wiki/Tutorials">tutorials</a> or <a href="https://github.com/frankkramer-lab/MIScnn/wiki/Examples">examples</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Tutorials/" class="btn btn-neutral float-right" title="Tutorials">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Install/" class="btn btn-neutral" title="Install"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+  <p> <a href="/Home/">Home</a> | <a href="/Install/">Installation</a> | <a href="/Usage/">Usage</a> | <a href="/Examples/">Examples</a> | <a href="/Credits/">Contact</a></p>
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Install/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Tutorials/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
