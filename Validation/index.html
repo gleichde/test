@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Validation Techniques - MISCnn wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,8 +36,15 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <a href="">
+        <div class="miscnn-logo">
+          <img src="https://raw.githubusercontent.com/gleichde/gleichde.github.io/master/logo.JPG" class="miscnn-logo-img">
+          
+        </div>
+      </a>
+
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> MISCnn wiki</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -45,138 +53,71 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Home/">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Getting Started</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Home/">What is MIScnn?</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Install/">Install</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Usage/">Basic Usage</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Tutorials/">Tutorials</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Examples/">Examples</a>
-                </li>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Home/">What is MIScnn?</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Install/">Install</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Usage/">Basic Usage</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Tutorials/">Tutorials</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Examples/">Examples</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Core</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-IO/">Data I/O</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Preprocessor/">Preprocessor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-Augmentation/">Data Augmentation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Model/">Neural Network Model</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Validation Techniques</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#k-fold-cross-validation">k-fold Cross-Validation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#percentage-split-validation">Percentage-Split Validation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#leave-one-out-validation">Leave-One-Out Validation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#detailed-validation">Detailed Validation</a>
+    </li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Core</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Data-IO/">Data I/O</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Preprocessor/">Preprocessor</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data-Augmentation/">Data Augmentation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Model/">Neural Network Model</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Validation Techniques</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#methods">Methods</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#k-fold-cross-validation">k-fold Cross-Validation</a></li>
-        
-            <li><a class="toctree-l4" href="#percentage-split-validation">Percentage-Split Validation</a></li>
-        
-            <li><a class="toctree-l4" href="#leave-one-out-validation">Leave-One-Out Validation</a></li>
-        
-            <li><a class="toctree-l4" href="#detailed-validation">Detailed Validation</a></li>
-        
-        </ul>
-    
-
-    </ul>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Interfaces</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Architectures/">Architectures</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Metrics/">Metrics</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Subfunctions/">Subfunctions</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../IO-Interfaces/">I/O Interfaces</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Extras</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Sample/">Sample</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Other</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Contribute/">How to Contribute</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Credits/">Author and Contacts</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Interfaces</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Architectures/">Architectures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Metrics/">Metrics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Subfunctions/">Subfunctions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../IO-Interfaces/">I/O Interfaces</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Extras</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Sample/">Sample</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Other</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Contribute/">How to Contribute</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Credits/">Author and Contacts</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -203,8 +144,12 @@
     <li>Validation Techniques</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/frankkramer-lab/MIScnn/"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -214,15 +159,11 @@
 <p>MIScnn provides the following three popular validation techniques: Cross-Validation, Percentage-Split Validation and Leave-One-Out Validation.</p>
 <h2 id="methods">Methods</h2>
 <h4 id="k-fold-cross-validation">k-fold Cross-Validation</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cross_validation</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">k_fold</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-                 <span class="n">iterations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">evaluation_path</span><span class="o">=</span><span class="s2">&quot;evaluation&quot;</span><span class="p">,</span>
-                 <span class="n">draw_figures</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">run_detailed_evaluation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                 <span class="n">callbacks</span><span class="o">=</span><span class="p">[],</span> <span class="n">save_models</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">direct_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">cross_validation(sample_list, model, k_fold=3, epochs=20,
+                 iterations=None, evaluation_path=&quot;evaluation&quot;,
+                 draw_figures=True, run_detailed_evaluation=True,
+                 callbacks=[], save_models=True, direct_output=False)
+</code></pre>
 
 <p>Function for an automatic k-fold Cross-Validation of the Neural Network model by running the whole pipeline several times with different data set combinations.</p>
 <p><strong>Arguments:</strong><br />
@@ -240,27 +181,19 @@
 <p><strong>Returns:</strong><br />
 None or validation results if direct_output is true. The variable validation_results is a list of Keras History objects containing all kinds of information. For each fold, a history object will created and appended to the list.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">=</span><span class="n">pp</span><span class="p">)</span>
+<pre><code class="python">model = miscnn.Neural_Network(preprocessor=pp)
 
-<span class="kn">from</span> <span class="nn">miscnn.evaluation</span> <span class="kn">import</span> <span class="n">cross_validation</span>
-<span class="n">cross_validation</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">k_fold</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+from miscnn.evaluation import cross_validation
+cross_validation(sample_list, model, k_fold=3, epochs=50)
+</code></pre>
 
 <hr />
 <h4 id="percentage-split-validation">Percentage-Split Validation</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">split_validation</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">percentage</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-                 <span class="n">iterations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">evaluation_path</span><span class="o">=</span><span class="s2">&quot;evaluation&quot;</span><span class="p">,</span>
-                 <span class="n">draw_figures</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">run_detailed_evaluation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                 <span class="n">callbacks</span><span class="o">=</span><span class="p">[],</span> <span class="n">direct_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">split_validation(sample_list, model, percentage=0.2, epochs=20,
+                 iterations=None, evaluation_path=&quot;evaluation&quot;,
+                 draw_figures=True, run_detailed_evaluation=True,
+                 callbacks=[], direct_output=False)
+</code></pre>
 
 <p>Function for an automatic Percentage-Split Validation of the Neural Network model by running the whole pipeline once with a test and train data set.</p>
 <p><strong>Arguments:</strong><br />
@@ -277,23 +210,17 @@ None or validation results if direct_output is true. The variable validation_res
 <p><strong>Returns:</strong><br />
 None or a Keras History objects if direct_output is true.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">=</span><span class="n">pp</span><span class="p">)</span>
+<pre><code class="python">model = miscnn.Neural_Network(preprocessor=pp)
 
-<span class="kn">from</span> <span class="nn">miscnn.evaluation</span> <span class="kn">import</span> <span class="n">split_validation</span>
-<span class="n">split_validation</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">percentage</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+from miscnn.evaluation import split_validation
+split_validation(sample_list, model, percentage=0.2, epochs=50)
+</code></pre>
 
 <hr />
 <h4 id="leave-one-out-validation">Leave-One-Out Validation</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">leave_one_out</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-              <span class="n">callbacks</span><span class="o">=</span><span class="p">[],</span> <span class="n">evaluation_path</span><span class="o">=</span><span class="s2">&quot;evaluation&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">leave_one_out(sample_list, model, epochs=20, iterations=None,
+              callbacks=[], evaluation_path=&quot;evaluation&quot;)
+</code></pre>
 
 <p>Function for an automatic Leave-One-Out Validation of the Neural Network model by running the whole pipeline once by training on the complete data set except one sample and then predict the segmentation of the last remaining sample.</p>
 <p><strong>Arguments:</strong><br />
@@ -305,21 +232,16 @@ None or a Keras History objects if direct_output is true.</p>
 - <strong>evaluation_path:</strong> Path to the evaluation data directory. This directory will be created and used for storing all kinds of evaluation results during the validation processes.</p>
 <p><strong>Returns:</strong>  None.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">=</span><span class="n">pp</span><span class="p">)</span>
+<pre><code class="python">model = miscnn.Neural_Network(preprocessor=pp)
 
-<span class="kn">from</span> <span class="nn">miscnn.evaluation</span> <span class="kn">import</span> <span class="n">detailed_validation</span>
-<span class="n">detailed_validation</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">evaluation_path</span><span class="o">=</span><span class="s2">&quot;evaluation&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+from miscnn.evaluation import detailed_validation
+detailed_validation(sample_list, model, evaluation_path=&quot;evaluation&quot;)
+</code></pre>
 
 <hr />
 <h4 id="detailed-validation">Detailed Validation</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">detailed_validation</span><span class="p">(</span><span class="n">validation_samples</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">evaluation_path</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">detailed_validation(validation_samples, model, evaluation_path)
+</code></pre>
 
 <p>Function for detailed validation of a validation sample data set. The segmentation of these samples will be predicted with an already fitted model and evaluated.<br />
 Normally, this method will be called automatically inside one of the three validation techniques. Nevertheless, it is possible to use the detailed validation method manually.</p>
@@ -330,15 +252,11 @@ Normally, this method will be called automatically inside one of the three valid
 - <strong>evaluation_path:</strong> Path to the evaluation data directory. This directory will be created and used for storing all kinds of evaluation results during the validation processes.</p>
 <p><strong>Returns:</strong>  None.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">=</span><span class="n">pp</span><span class="p">)</span>
+<pre><code class="python">model = miscnn.Neural_Network(preprocessor=pp)
 
-<span class="kn">from</span> <span class="nn">miscnn.evaluation.detailed_validation</span> <span class="kn">import</span> <span class="n">detailed_validation</span>
-<span class="n">detailed_validation</span><span class="p">(</span><span class="n">validation_samples</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">evaluation_path</span><span class="o">=</span><span class="s2">&quot;evaluation&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+from miscnn.evaluation.detailed_validation import detailed_validation
+detailed_validation(validation_samples, model, evaluation_path=&quot;evaluation&quot;)
+</code></pre>
 
 <hr />
               
@@ -357,7 +275,7 @@ Normally, this method will be called automatically inside one of the three valid
   
 
   <hr/>
-
+  <p> <a href="/">Home</a> | <a href="/Install/">Installation</a> | <a href="/Usage/">Usage</a> | <a href="/Examples/">Examples</a> | <a href="/Credits/">Contact</a></p>
   <div role="contentinfo">
     <!-- Copyright etc -->
     
@@ -373,8 +291,10 @@ Normally, this method will be called automatically inside one of the three valid
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/frankkramer-lab/MIScnn/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../Model/" style="color: #fcfcfc;">&laquo; Previous</a></span>
@@ -387,6 +307,11 @@ Normally, this method will be called automatically inside one of the three valid
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

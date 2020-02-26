@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Neural Network Model - MISCnn wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,8 +36,15 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <a href="">
+        <div class="miscnn-logo">
+          <img src="https://raw.githubusercontent.com/gleichde/gleichde.github.io/master/logo.JPG" class="miscnn-logo-img">
+          
+        </div>
+      </a>
+
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> MISCnn wiki</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -45,144 +53,77 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Home/">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Getting Started</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Home/">What is MIScnn?</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Install/">Install</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Usage/">Basic Usage</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Tutorials/">Tutorials</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Examples/">Examples</a>
-                </li>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Home/">What is MIScnn?</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Install/">Install</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Usage/">Basic Usage</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Tutorials/">Tutorials</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Examples/">Examples</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Core</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-IO/">Data I/O</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Preprocessor/">Preprocessor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-Augmentation/">Data Augmentation</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Neural Network Model</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#initialization">Initialization</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#train">train</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#predict">predict</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#evaluate">evaluate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reset_weights">reset_weights</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dump">dump</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#load">load</a>
+    </li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Core</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Data-IO/">Data I/O</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Preprocessor/">Preprocessor</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data-Augmentation/">Data Augmentation</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Neural Network Model</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#methods">Methods</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#initialization">Initialization</a></li>
-        
-            <li><a class="toctree-l4" href="#train">train</a></li>
-        
-            <li><a class="toctree-l4" href="#predict">predict</a></li>
-        
-            <li><a class="toctree-l4" href="#evaluate">evaluate</a></li>
-        
-            <li><a class="toctree-l4" href="#reset_weights">reset_weights</a></li>
-        
-            <li><a class="toctree-l4" href="#dump">dump</a></li>
-        
-            <li><a class="toctree-l4" href="#load">load</a></li>
-        
-        </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Validation/">Validation Techniques</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Interfaces</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Architectures/">Architectures</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Metrics/">Metrics</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Subfunctions/">Subfunctions</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../IO-Interfaces/">I/O Interfaces</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Extras</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Sample/">Sample</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Other</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Contribute/">How to Contribute</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Credits/">Author and Contacts</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Validation/">Validation Techniques</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Interfaces</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Architectures/">Architectures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Metrics/">Metrics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Subfunctions/">Subfunctions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../IO-Interfaces/">I/O Interfaces</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Extras</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Sample/">Sample</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Other</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Contribute/">How to Contribute</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Credits/">Author and Contacts</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -209,8 +150,12 @@
     <li>Neural Network Model</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/frankkramer-lab/MIScnn/"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -220,15 +165,11 @@
 <p>With an initialized Neural Network model instance, it is possible to run training, prediction and evaluations.</p>
 <h2 id="methods">Methods</h2>
 <h4 id="initialization">Initialization</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="p">,</span> <span class="n">architecture</span><span class="o">=</span><span class="n">Architecture</span><span class="p">(),</span>
-               <span class="n">loss</span><span class="o">=</span><span class="n">tversky_loss</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">dice_soft</span><span class="p">],</span>
-               <span class="n">learninig_rate</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">batch_queue_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-               <span class="n">workers</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">gpu_number</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">Neural_Network(preprocessor, architecture=Architecture(),
+               loss=tversky_loss, metrics=[dice_soft],
+               learninig_rate=0.0001, batch_queue_size=2,
+               workers=1, gpu_number=1)
+</code></pre>
 
 <p>Initialization function for creating a Neural Network (model) object.</p>
 <p><strong>Arguments:</strong><br />
@@ -243,17 +184,14 @@
 <p><strong>Returns:</strong><br />
 A Neural Network Model class object.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">miscnn</span><span class="o">.</span><span class="n">Neural_Network</span><span class="p">(</span><span class="n">preprocessor</span><span class="o">=</span><span class="n">pp</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">],</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">model = miscnn.Neural_Network(preprocessor=pp)
+model.train(sample_list[0:100], epochs=50)
+</code></pre>
 
 <hr />
 <h4 id="train">train</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">train</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[])</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">train(sample_list, epochs=20, iterations=None, callbacks=[])
+</code></pre>
 
 <p>Fitting function for the Neural Network model using the provided list of sample indices.</p>
 <p><strong>Arguments:</strong>
@@ -264,15 +202,13 @@ A Neural Network Model class object.</p>
 <p><strong>Returns:</strong><br />
 None.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">],</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">model.train(sample_list[0:100], epochs=50)
+</code></pre>
 
 <hr />
 <h4 id="predict">predict</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">sample_list</span><span class="p">,</span> <span class="n">direct_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">predict(sample_list, direct_output=False)
+</code></pre>
 
 <p>Prediction function for the Neural Network model. The fitted model will predict a segmentation for the provided list of sample indices.</p>
 <p><strong>Arguments:</strong>
@@ -281,25 +217,18 @@ None.</p>
 <p><strong>Returns:</strong><br />
 None or a list of NumPy arrays containing predictions.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Passing output of predictions into Data I/O interface - (intended for disk storage)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">120</span><span class="p">])</span>
+<pre><code class="python"># Passing output of predictions into Data I/O interface - (intended for disk storage)
+model.predict(sample_list[100:120])
 
-<span class="c1"># Direct output of predictions into variable (memory)</span>
-<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">120</span><span class="p">],</span> <span class="n">direct_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+# Direct output of predictions into variable (memory)
+predictions = model.predict(sample_list[100:120], direct_output=True)
+</code></pre>
 
 <hr />
 <h4 id="evaluate">evaluate</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">evaluate</span><span class="p">(</span><span class="n">training_samples</span><span class="p">,</span> <span class="n">validation_samples</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
-         <span class="n">iterations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="p">[]):</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">evaluate(training_samples, validation_samples, epochs=20,
+         iterations=None, callbacks=[]):
+</code></pre>
 
 <p>Evaluation function for the Neural Network model using the provided lists of sample indices for training and validation. It is also possible to pass custom Callback classes in order to obtain more information.</p>
 <p><strong>Arguments:</strong>
@@ -311,60 +240,46 @@ None or a list of NumPy arrays containing predictions.</p>
 <p><strong>Returns:</strong><br />
 Keras history object (gathered fitting information and evaluation results of the validation).</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">training_samples</span><span class="o">=</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">80</span><span class="p">],</span>
-                         <span class="n">validation_samples</span><span class="o">=</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">80</span><span class="p">:</span><span class="mi">100</span><span class="p">],</span>
-                         <span class="n">iterations</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">history = model.evaluate(training_samples=sample_list[0:80],
+                         validation_samples=sample_list[80:100],
+                         iterations=10)
+</code></pre>
 
 <hr />
 <h4 id="reset_weights">reset_weights</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">reset_weights</span><span class="p">()</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">reset_weights()
+</code></pre>
 
 <p>Re-initialize weights of the neural network model.</p>
 <p><strong>Arguments:</strong> None.</p>
 <p><strong>Returns:</strong>  None.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Fit weights of model</span>
-<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">],</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="c1"># Throw fitted weights away to default weights</span>
-<span class="n">model</span><span class="o">.</span><span class="n">reset_weights</span><span class="p">()</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python"># Fit weights of model
+model.train(sample_list[0:100], epochs=50)
+# Throw fitted weights away to default weights
+model.reset_weights()
+</code></pre>
 
 <hr />
 <h4 id="dump">dump</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">dump</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">dump(file_path)
+</code></pre>
 
 <p>Dump neural network model and its weights to file.</p>
 <p><strong>Arguments:</strong>
 - <strong>file_path:</strong> Output path, at which the model will be stored.</p>
 <p><strong>Returns:</strong>  None.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Fit weights of model</span>
-<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">],</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
-<span class="c1"># Save fitted model for reusability</span>
-<span class="n">model</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="s2">&quot;my_model.hdf5&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python"># Fit weights of model
+model.train(sample_list[0:100], epochs=50)
+# Save fitted model for reusability
+model.dump(&quot;my_model.hdf5&quot;)
+</code></pre>
 
 <hr />
 <h4 id="load">load</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">load</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">custom_objects</span><span class="o">=</span><span class="p">{}):</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">load(file_path, custom_objects={}):
+</code></pre>
 
 <p>Load neural network model and its weights from a file. After loading, the model will be compiled.</p>
 <p><strong>Arguments:</strong>
@@ -372,15 +287,11 @@ Keras history object (gathered fitting information and evaluation results of the
 - <strong>custom_objects:</strong> Dictionary for custom objects for compiling (e.g. custom-defined metrics).</p>
 <p><strong>Returns:</strong>  None.</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Save fitted model for reusability</span>
-<span class="n">model</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;my_model.hdf5&quot;</span><span class="p">)</span>
-<span class="c1"># Predict segmentation of some samples</span>
-<span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sample_list</span><span class="p">[</span><span class="mi">100</span><span class="p">:</span><span class="mi">120</span><span class="p">])</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python"># Save fitted model for reusability
+model.load(&quot;my_model.hdf5&quot;)
+# Predict segmentation of some samples
+model.predict(sample_list[100:120])
+</code></pre>
 
 <hr />
               
@@ -399,7 +310,7 @@ Keras history object (gathered fitting information and evaluation results of the
   
 
   <hr/>
-
+  <p> <a href="/">Home</a> | <a href="/Install/">Installation</a> | <a href="/Usage/">Usage</a> | <a href="/Examples/">Examples</a> | <a href="/Credits/">Contact</a></p>
   <div role="contentinfo">
     <!-- Copyright etc -->
     
@@ -415,8 +326,10 @@ Keras history object (gathered fitting information and evaluation results of the
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/frankkramer-lab/MIScnn/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../Data-Augmentation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
@@ -429,6 +342,11 @@ Keras history object (gathered fitting information and evaluation results of the
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

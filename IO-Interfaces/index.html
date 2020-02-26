@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>I/O Interfaces - MISCnn wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,8 +36,15 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <a href="">
+        <div class="miscnn-logo">
+          <img src="https://raw.githubusercontent.com/gleichde/gleichde.github.io/master/logo.JPG" class="miscnn-logo-img">
+          
+        </div>
+      </a>
+
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> MISCnn wiki</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -45,147 +53,63 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Home/">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Getting Started</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Home/">What is MIScnn?</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Install/">Install</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Usage/">Basic Usage</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Tutorials/">Tutorials</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Examples/">Examples</a>
-                </li>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Home/">What is MIScnn?</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Install/">Install</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Usage/">Basic Usage</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Tutorials/">Tutorials</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Examples/">Examples</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Core</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-IO/">Data I/O</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Preprocessor/">Preprocessor</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-Augmentation/">Data Augmentation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Model/">Neural Network Model</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Validation/">Validation Techniques</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Interfaces</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Architectures/">Architectures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Metrics/">Metrics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Subfunctions/">Subfunctions</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">I/O Interfaces</a>
+    <ul class="current">
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Core</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Data-IO/">Data I/O</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Preprocessor/">Preprocessor</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data-Augmentation/">Data Augmentation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Model/">Neural Network Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Validation/">Validation Techniques</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Interfaces</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Architectures/">Architectures</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Metrics/">Metrics</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Subfunctions/">Subfunctions</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">I/O Interfaces</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#usage-of-miscnn-data-io-interfaces">Usage of MIScnn Data IO Interfaces</a></li>
-    
-
-    <li class="toctree-l3"><a href="#available-data-io-interfaces-provided-by-miscnn">Available Data IO Interfaces provided by MIScnn</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#nifti-io-interface">NIfTI IO Interface</a></li>
-        
-            <li><a class="toctree-l4" href="#image-io-interface">Image IO Interface</a></li>
-        
-            <li><a class="toctree-l4" href="#dicom-io-interface">DICOM IO Interface</a></li>
-        
-            <li><a class="toctree-l4" href="#dictionary-io-interface">Dictionary IO Interface</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#creation-of-custom-data-io-interfaces">Creation of custom Data IO Interfaces</a></li>
-    
-
-    <li class="toctree-l3"><a href="#abstract-base-class-for-data-io-interfaces">Abstract Base Class for Data IO Interfaces</a></li>
-    
-
-    </ul>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Extras</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Sample/">Sample</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Other</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Contribute/">How to Contribute</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Credits/">Author and Contacts</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Extras</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Sample/">Sample</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Other</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Contribute/">How to Contribute</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Credits/">Author and Contacts</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -212,8 +136,12 @@
     <li>I/O Interfaces</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/frankkramer-lab/MIScnn/"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -225,64 +153,44 @@ The aim of the IO Interface is to handle the loading and saving process of image
 <p>The Data IO Interface module enables MIScnn to handle a wide variety of imaging formats, as well as offers the possibility to integrate any user-required image format or data structure into the MIScnn pipeline.</p>
 <h2 id="usage-of-miscnn-data-io-interfaces">Usage of MIScnn Data IO Interfaces</h2>
 <p>The Data IO Interface can be passed to the Data IO class initialization. The Data IO class automatically uses the IO Interface for image loading and saving.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import desired Data IO Interface</span>
-<span class="kn">from</span> <span class="nn">data_loading.interfaces.nifti_io</span> <span class="kn">import</span> <span class="n">NIFTI_interface</span>
+<pre><code class="python"># Import desired Data IO Interface
+from data_loading.interfaces.nifti_io import NIFTI_interface
 
-<span class="c1"># Initialize Data IO Interface</span>
-<span class="n">interface</span> <span class="o">=</span> <span class="n">NIFTI_interface</span><span class="p">(</span><span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;case_00[0-9]+&quot;</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                            <span class="n">classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+# Initialize Data IO Interface
+interface = NIFTI_interface(pattern=&quot;case_00[0-9]+&quot;, channels=1,
+                            classes=3)
 
-<span class="c1"># Pass Data IO Interface to Data IO class</span>
-<span class="kn">from</span> <span class="nn">data_loading.data_io</span> <span class="kn">import</span> <span class="n">Data_IO</span>
-<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;/home/mudomini/projects/KITS_challenge2019/kits19/data/&quot;</span>
-<span class="n">data_io</span> <span class="o">=</span> <span class="n">Data_IO</span><span class="p">(</span><span class="n">interface</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+# Pass Data IO Interface to Data IO class
+from data_loading.data_io import Data_IO
+data_path = &quot;/home/mudomini/projects/KITS_challenge2019/kits19/data/&quot;
+data_io = Data_IO(interface, data_path)
+</code></pre>
 
 <h2 id="available-data-io-interfaces-provided-by-miscnn">Available Data IO Interfaces provided by MIScnn</h2>
 <h4 id="nifti-io-interface">NIfTI IO Interface</h4>
 <p>Data I/O Interface for NIfTI files. The Neuroimaging Informatics Technology Initiative file format is designed to contain brain images from e.g. magnetic resonance tomography. Nevertheless, it is currently broadly used for any 3D medical image data.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Import NIfTI IO Interface and initialize it</span>
-<span class="kn">from</span> <span class="nn">data_loading.interfaces.nifti_io</span> <span class="kn">import</span> <span class="n">NIFTI_interface</span>
-<span class="n">interface</span> <span class="o">=</span> <span class="n">NIFTI_interface</span><span class="p">(</span><span class="n">pattern</span><span class="o">=</span><span class="s2">&quot;case_00[0-9]+&quot;</span><span class="p">,</span>
-                            <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<pre><code class="python"># Import NIfTI IO Interface and initialize it
+from data_loading.interfaces.nifti_io import NIFTI_interface
+interface = NIFTI_interface(pattern=&quot;case_00[0-9]+&quot;,
+                            channels=1, classes=3)
 
-<span class="c1"># Pass Interface to Data IO class</span>
-<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;/home/mudomini/projects/KITS_challenge2019/kits19/data.interpolated/&quot;</span>
-<span class="n">data_io</span> <span class="o">=</span> <span class="n">Data_IO</span><span class="p">(</span><span class="n">interface</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+# Pass Interface to Data IO class
+data_path = &quot;/home/mudomini/projects/KITS_challenge2019/kits19/data.interpolated/&quot;
+data_io = Data_IO(interface, data_path)
+
+</code></pre>
 
 <hr />
 <h4 id="image-io-interface">Image IO Interface</h4>
 <p>Coming soon for PNG, JPEG and TIF</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">:)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">:)
+</code></pre>
 
 <hr />
 <h4 id="dicom-io-interface">DICOM IO Interface</h4>
 <p>Coming soon for DICOM data</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">:)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">:)
+</code></pre>
 
 <hr />
 <h4 id="dictionary-io-interface">Dictionary IO Interface</h4>
@@ -298,319 +206,168 @@ The aim of the IO Interface is to handle the loading and saving process of image
 (3) optional details</p>
 </blockquote>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Create dictionary containing the data set</span>
-<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;case_00001&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">image1</span><span class="p">,</span> <span class="n">segmentation1</span><span class="p">),</span>
-        <span class="s2">&quot;case_00002&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">image2</span><span class="p">,</span> <span class="n">segmentation2</span><span class="p">)}</span>
+<pre><code class="python"># Create dictionary containing the data set
+dict = {&quot;case_00001&quot;: (image1, segmentation1),
+        &quot;case_00002&quot;: (image2, segmentation2)}
 
-<span class="c1"># Import Data IO Interface and pass dictionary to it</span>
-<span class="kn">from</span> <span class="nn">data_loading.interfaces</span> <span class="kn">import</span> <span class="n">Dictionary_interface</span>
-<span class="n">interface</span> <span class="o">=</span> <span class="n">Dictionary_interface</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                 <span class="n">classes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three_dim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+# Import Data IO Interface and pass dictionary to it
+from data_loading.interfaces import Dictionary_interface
+interface = Dictionary_interface(dict, channels=1,
+                                 classes=2, three_dim=True)
 
-<span class="c1"># Pass Interface to Data IO class</span>
-<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;/home/mudomini/MIScnn_tmp/&quot;</span>
-<span class="n">data_io</span> <span class="o">=</span> <span class="n">Data_IO</span><span class="p">(</span><span class="n">interface</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+# Pass Interface to Data IO class
+data_path = &quot;/home/mudomini/MIScnn_tmp/&quot;
+data_io = Data_IO(interface, data_path)
+</code></pre>
 
 <hr />
 <h2 id="creation-of-custom-data-io-interfaces">Creation of custom Data IO Interfaces</h2>
 <p>todo</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">todo</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">todo
+</code></pre>
 
 <h2 id="abstract-base-class-for-data-io-interfaces">Abstract Base Class for Data IO Interfaces</h2>
 <p>MIScnn also offers a documented Abstract Base Class for simple creation of custom Data IO Interfaces for your specific needs.</p>
 <p>A Data IO Interface inherits the abstract_io class with the following methods: initialize, load_image, load_segmentation, load_prediction, save_prediction, load_details.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
-  2
-  3
-  4
-  5
-  6
-  7
-  8
-  9
- 10
- 11
- 12
- 13
- 14
- 15
- 16
- 17
- 18
- 19
- 20
- 21
- 22
- 23
- 24
- 25
- 26
- 27
- 28
- 29
- 30
- 31
- 32
- 33
- 34
- 35
- 36
- 37
- 38
- 39
- 40
- 41
- 42
- 43
- 44
- 45
- 46
- 47
- 48
- 49
- 50
- 51
- 52
- 53
- 54
- 55
- 56
- 57
- 58
- 59
- 60
- 61
- 62
- 63
- 64
- 65
- 66
- 67
- 68
- 69
- 70
- 71
- 72
- 73
- 74
- 75
- 76
- 77
- 78
- 79
- 80
- 81
- 82
- 83
- 84
- 85
- 86
- 87
- 88
- 89
- 90
- 91
- 92
- 93
- 94
- 95
- 96
- 97
- 98
- 99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#-----------------------------------------------------#</span>
-<span class="c1">#                   Library imports                   #</span>
-<span class="c1">#-----------------------------------------------------#</span>
-<span class="c1"># External libraries</span>
-<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<pre><code class="python">#-----------------------------------------------------#
+#                   Library imports                   #
+#-----------------------------------------------------#
+# External libraries
+from abc import ABC, abstractmethod
 
-<span class="c1">#-----------------------------------------------------#</span>
-<span class="c1">#       Abstract Interface for the Data IO class      #</span>
-<span class="c1">#-----------------------------------------------------#</span>
-<span class="sd">&quot;&quot;&quot; An abstract base class for a Data_IO interface.</span>
+#-----------------------------------------------------#
+#       Abstract Interface for the Data IO class      #
+#-----------------------------------------------------#
+&quot;&quot;&quot; An abstract base class for a Data_IO interface.
 
-<span class="sd">Methods:</span>
-<span class="sd">    __init__                Object creation function</span>
-<span class="sd">    initialize:             Prepare the data set and create indices list</span>
-<span class="sd">    load_image:             Load an image</span>
-<span class="sd">    load_segmentation:      Load a segmentation</span>
-<span class="sd">    load_prediction:        Load a prediction from file</span>
-<span class="sd">    load_details:           Load optional information</span>
-<span class="sd">    save_prediction:        Save a prediction to file</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="k">class</span> <span class="nc">Abstract_IO</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="c1">#                   __init__                  #</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="sd">&quot;&quot;&quot; Functions which will be called during the I/O interface object creation.</span>
-<span class="sd">        This function can be used to pass variables in the custom I/O interface.</span>
-<span class="sd">        The only required passed variable is the number of channels in the images,</span>
-<span class="sd">        the number of classes in the segmentation and the dimension of the data.</span>
+Methods:
+    __init__                Object creation function
+    initialize:             Prepare the data set and create indices list
+    load_image:             Load an image
+    load_segmentation:      Load a segmentation
+    load_prediction:        Load a prediction from file
+    load_details:           Load optional information
+    save_prediction:        Save a prediction to file
+&quot;&quot;&quot;
+class Abstract_IO(ABC):
+    #---------------------------------------------#
+    #                   __init__                  #
+    #---------------------------------------------#
+    &quot;&quot;&quot; Functions which will be called during the I/O interface object creation.
+        This function can be used to pass variables in the custom I/O interface.
+        The only required passed variable is the number of channels in the images,
+        the number of classes in the segmentation and the dimension of the data.
 
-<span class="sd">        Parameter:</span>
-<span class="sd">            channels (integer):    Number of channels of the image (grayscale:1, RGB:3)</span>
-<span class="sd">            classes (integer):     Number of classes in the segmentation (binary:2, multi-class:3+)</span>
-<span class="sd">            three_dim (boolean):   Variable to express, if the data is two or three dimensional</span>
-<span class="sd">        Return:</span>
-<span class="sd">            None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">three_dim</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">channels</span> <span class="o">=</span> <span class="n">channels</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">classes</span> <span class="o">=</span> <span class="n">classes</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">three_dim</span> <span class="o">=</span> <span class="n">three_dim</span>
-        <span class="k">pass</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="c1">#                  initialize                 #</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="sd">&quot;&quot;&quot; Initialize and prepare the image data set, return the number of samples in the data set</span>
+        Parameter:
+            channels (integer):    Number of channels of the image (grayscale:1, RGB:3)
+            classes (integer):     Number of classes in the segmentation (binary:2, multi-class:3+)
+            three_dim (boolean):   Variable to express, if the data is two or three dimensional
+        Return:
+            None
+    &quot;&quot;&quot;
+    @abstractmethod
+    def __init__(self, channels=1, classes=2, three_dim=False):
+        self.channels = channels
+        self.classes = classes
+        self.three_dim = three_dim
+        pass
+    #---------------------------------------------#
+    #                  initialize                 #
+    #---------------------------------------------#
+    &quot;&quot;&quot; Initialize and prepare the image data set, return the number of samples in the data set
 
-<span class="sd">        Parameter:</span>
-<span class="sd">            input_path (string):    Path to the input data directory, in which all imaging data have to be accessible</span>
-<span class="sd">        Return:</span>
-<span class="sd">            indices_list [list]:    List of indices. The Data_IO class will iterate over this list and</span>
-<span class="sd">                                    call the load_image and load_segmentation functions providing the current index.</span>
-<span class="sd">                                    This can be used to train/predict on just a subset of the data set.</span>
-<span class="sd">                                    e.g. indices_list = [0,1,9]</span>
-<span class="sd">                                    -&gt; load_image(0) | load_image(1) | load_image(9)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_path</span><span class="p">):</span>
-        <span class="k">pass</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="c1">#                  load_image                 #</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="sd">&quot;&quot;&quot; Load the image with the index i from the data set and return it as a numpy matrix.</span>
-<span class="sd">        Be aware that MIScnn only supports a last_channel structure.</span>
-<span class="sd">        2D: (x,y,channel) or (x,y)</span>
-<span class="sd">        3D: (x,y,z,channel) or (x,y,z)</span>
+        Parameter:
+            input_path (string):    Path to the input data directory, in which all imaging data have to be accessible
+        Return:
+            indices_list [list]:    List of indices. The Data_IO class will iterate over this list and
+                                    call the load_image and load_segmentation functions providing the current index.
+                                    This can be used to train/predict on just a subset of the data set.
+                                    e.g. indices_list = [0,1,9]
+                                    -&gt; load_image(0) | load_image(1) | load_image(9)
+    &quot;&quot;&quot;
+    @abstractmethod
+    def initialize(self, input_path):
+        pass
+    #---------------------------------------------#
+    #                  load_image                 #
+    #---------------------------------------------#
+    &quot;&quot;&quot; Load the image with the index i from the data set and return it as a numpy matrix.
+        Be aware that MIScnn only supports a last_channel structure.
+        2D: (x,y,channel) or (x,y)
+        3D: (x,y,z,channel) or (x,y,z)
 
-<span class="sd">        Parameter:</span>
-<span class="sd">            index (variable):       An index from the provided indices_list of the initialize function</span>
-<span class="sd">        Return:</span>
-<span class="sd">            image [numpy matrix]:   A numpy matrix/array containing the image</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">load_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-        <span class="k">pass</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="c1">#              load_segmentation              #</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="sd">&quot;&quot;&quot; Load the segmentation of the image with the index i from the data set and return it as a numpy matrix.</span>
-<span class="sd">        Be aware that MIScnn only supports a last_channel structure.</span>
-<span class="sd">        2D: (x,y,channel) or (x,y)</span>
-<span class="sd">        3D: (x,y,z,channel) or (x,y,z)</span>
+        Parameter:
+            index (variable):       An index from the provided indices_list of the initialize function
+        Return:
+            image [numpy matrix]:   A numpy matrix/array containing the image
+    &quot;&quot;&quot;
+    @abstractmethod
+    def load_image(self, i):
+        pass
+    #---------------------------------------------#
+    #              load_segmentation              #
+    #---------------------------------------------#
+    &quot;&quot;&quot; Load the segmentation of the image with the index i from the data set and return it as a numpy matrix.
+        Be aware that MIScnn only supports a last_channel structure.
+        2D: (x,y,channel) or (x,y)
+        3D: (x,y,z,channel) or (x,y,z)
 
-<span class="sd">        Parameter:</span>
-<span class="sd">            index (variable):       An index from the provided indices_list of the initialize function</span>
-<span class="sd">        Return:</span>
-<span class="sd">            seg [numpy matrix]:     A numpy matrix/array containing the segmentation</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">load_segmentation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-        <span class="k">pass</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="c1">#               load_prediction               #</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="sd">&quot;&quot;&quot; Load the prediction of the image with the index i from the output directory</span>
-<span class="sd">        and return it as a numpy matrix.</span>
+        Parameter:
+            index (variable):       An index from the provided indices_list of the initialize function
+        Return:
+            seg [numpy matrix]:     A numpy matrix/array containing the segmentation
+    &quot;&quot;&quot;
+    @abstractmethod
+    def load_segmentation(self, i):
+        pass
+    #---------------------------------------------#
+    #               load_prediction               #
+    #---------------------------------------------#
+    &quot;&quot;&quot; Load the prediction of the image with the index i from the output directory
+        and return it as a numpy matrix.
 
-<span class="sd">        Parameter:</span>
-<span class="sd">            index (variable):       An index from the provided indices_list of the initialize function</span>
-<span class="sd">            output_path (string):   Path to the output directory in which MIScnn predictions are stored.</span>
-<span class="sd">        Return:</span>
-<span class="sd">            pred [numpy matrix]:    A numpy matrix/array containing the prediction</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">load_prediction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
-        <span class="k">pass</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="c1">#                 load_details                #</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="sd">&quot;&quot;&quot; Load optional details during sample creation. This function can be used to parse whatever</span>
-<span class="sd">        information you want into the sample object. This enables usage of these information in custom</span>
-<span class="sd">        preprocessing subfunctions.</span>
-<span class="sd">        Example: Slice thickness / voxel spacing</span>
+        Parameter:
+            index (variable):       An index from the provided indices_list of the initialize function
+            output_path (string):   Path to the output directory in which MIScnn predictions are stored.
+        Return:
+            pred [numpy matrix]:    A numpy matrix/array containing the prediction
+    &quot;&quot;&quot;
+    @abstractmethod
+    def load_prediction(self, i, output_path):
+        pass
+    #---------------------------------------------#
+    #                 load_details                #
+    #---------------------------------------------#
+    &quot;&quot;&quot; Load optional details during sample creation. This function can be used to parse whatever
+        information you want into the sample object. This enables usage of these information in custom
+        preprocessing subfunctions.
+        Example: Slice thickness / voxel spacing
 
-<span class="sd">        Parameter:</span>
-<span class="sd">            index (variable):       An index from the provided indices_list of the initialize function</span>
-<span class="sd">        Return:</span>
-<span class="sd">            dict [dictionary]:      A basic Python dictionary</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">load_details</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
-        <span class="k">pass</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="c1">#               save_prediction               #</span>
-    <span class="c1">#---------------------------------------------#</span>
-    <span class="sd">&quot;&quot;&quot; Backup the prediction of the image with the index i into the output directory.</span>
+        Parameter:
+            index (variable):       An index from the provided indices_list of the initialize function
+        Return:
+            dict [dictionary]:      A basic Python dictionary
+    &quot;&quot;&quot;
+    @abstractmethod
+    def load_details(self, i):
+        pass
+    #---------------------------------------------#
+    #               save_prediction               #
+    #---------------------------------------------#
+    &quot;&quot;&quot; Backup the prediction of the image with the index i into the output directory.
 
-<span class="sd">        Parameter:</span>
-<span class="sd">            pred (numpy matrix):    MIScnn computed prediction for the sample index</span>
-<span class="sd">            index (variable):       An index from the provided indices_list of the initialize function</span>
-<span class="sd">            output_path (string):   Path to the output directory in which MIScnn predictions are stored.</span>
-<span class="sd">                                    This directory will be created if not existent</span>
-<span class="sd">        Return:</span>
-<span class="sd">            None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nd">@abstractmethod</span>
-    <span class="k">def</span> <span class="nf">save_prediction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
-        <span class="k">pass</span>
-</pre></div>
-</td></tr></table>
+        Parameter:
+            pred (numpy matrix):    MIScnn computed prediction for the sample index
+            index (variable):       An index from the provided indices_list of the initialize function
+            output_path (string):   Path to the output directory in which MIScnn predictions are stored.
+                                    This directory will be created if not existent
+        Return:
+            None
+    &quot;&quot;&quot;
+    @abstractmethod
+    def save_prediction(self, pred, i, output_path):
+        pass
+</code></pre>
               
             </div>
           </div>
@@ -627,7 +384,7 @@ The aim of the IO Interface is to handle the loading and saving process of image
   
 
   <hr/>
-
+  <p> <a href="/">Home</a> | <a href="/Install/">Installation</a> | <a href="/Usage/">Usage</a> | <a href="/Examples/">Examples</a> | <a href="/Credits/">Contact</a></p>
   <div role="contentinfo">
     <!-- Copyright etc -->
     
@@ -643,8 +400,10 @@ The aim of the IO Interface is to handle the loading and saving process of image
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/frankkramer-lab/MIScnn/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../Subfunctions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
@@ -657,6 +416,11 @@ The aim of the IO Interface is to handle the loading and saving process of image
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

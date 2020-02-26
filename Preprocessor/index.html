@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Preprocessor - MISCnn wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,8 +36,15 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <a href="">
+        <div class="miscnn-logo">
+          <img src="https://raw.githubusercontent.com/gleichde/gleichde.github.io/master/logo.JPG" class="miscnn-logo-img">
+          
+        </div>
+      </a>
+
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> MISCnn wiki</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -45,132 +53,65 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../Home/">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Getting Started</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Home/">What is MIScnn?</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Install/">Install</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Usage/">Basic Usage</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Tutorials/">Tutorials</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Examples/">Examples</a>
-                </li>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Home/">What is MIScnn?</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Install/">Install</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Usage/">Basic Usage</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Tutorials/">Tutorials</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Examples/">Examples</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Core</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-IO/">Data I/O</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Preprocessor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#initialization">Initialization</a>
+    </li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Core</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Data-IO/">Data I/O</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Preprocessor</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#methods">Methods</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#initialization">Initialization</a></li>
-        
-        </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Data-Augmentation/">Data Augmentation</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Model/">Neural Network Model</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Validation/">Validation Techniques</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Interfaces</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Architectures/">Architectures</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Metrics/">Metrics</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Subfunctions/">Subfunctions</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../IO-Interfaces/">I/O Interfaces</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Documentation - Extras</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Sample/">Sample</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Other</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../Contribute/">How to Contribute</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Credits/">Author and Contacts</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Data-Augmentation/">Data Augmentation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Model/">Neural Network Model</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Validation/">Validation Techniques</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Interfaces</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Architectures/">Architectures</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Metrics/">Metrics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Subfunctions/">Subfunctions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../IO-Interfaces/">I/O Interfaces</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Documentation - Extras</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Sample/">Sample</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Other</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Contribute/">How to Contribute</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Credits/">Author and Contacts</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -197,8 +138,12 @@
     <li>Preprocessor</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/frankkramer-lab/MIScnn/"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -209,15 +154,11 @@
 and Data IO instance (optional also Data Augmentation instance).</p>
 <h2 id="methods">Methods</h2>
 <h4 id="initialization">Initialization</h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">Preprocessor</span><span class="p">(</span><span class="n">data_io</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">subfunctions</span><span class="o">=</span><span class="p">[],</span>
-             <span class="n">data_aug</span><span class="o">=</span><span class="n">Data_Augmentation</span><span class="p">(),</span> <span class="n">prepare_subfunctions</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">prepare_batches</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">analysis</span><span class="o">=</span><span class="s2">&quot;patchwise-crop&quot;</span><span class="p">,</span>
-             <span class="n">patch_shape</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
+<pre><code class="python">Preprocessor(data_io, batch_size, subfunctions=[],
+             data_aug=Data_Augmentation(), prepare_subfunctions=False,
+             prepare_batches=False, analysis=&quot;patchwise-crop&quot;,
+             patch_shape=None)
+</code></pre>
 
 <p>Initialization function for creating a Preprocessor object.  </p>
 <p><strong>Arguments:</strong><br />
@@ -237,23 +178,15 @@ Modus selection of analysis type. The analysis type will define how patches are 
 - "patchwise-crop": Analysis of random cropped patches from the image
 - "patchwise-grid": Analysis of patches by splitting the image into a grid</p>
 <p><strong>Example:</strong>  </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">processing.preprocessor</span> <span class="kn">import</span> <span class="n">Preprocessor</span>
-<span class="kn">from</span> <span class="nn">processing.subfunctions</span> <span class="kn">import</span> <span class="n">Clipping</span><span class="p">,</span> <span class="n">Normalization</span><span class="p">,</span> <span class="n">Resampling</span>
+<pre><code class="python">from processing.preprocessor import Preprocessor
+from processing.subfunctions import Clipping, Normalization, Resampling
 
-<span class="n">sf</span> <span class="o">=</span> <span class="p">[</span><span class="n">Clipping</span><span class="p">(</span><span class="nb">min</span><span class="o">=-</span><span class="mi">100</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">500</span><span class="p">),</span> <span class="n">Normalization</span><span class="p">(</span><span class="n">z_score</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">Resampling</span><span class="p">((</span><span class="mf">3.22</span><span class="p">,</span> <span class="mf">1.62</span><span class="p">,</span> <span class="mf">1.62</span><span class="p">))]</span>
+sf = [Clipping(min=-100, max=500), Normalization(z_score=True), Resampling((3.22, 1.62, 1.62))]
 
-<span class="n">pp</span> <span class="o">=</span> <span class="n">Preprocessor</span><span class="p">(</span><span class="n">data_io</span><span class="p">,</span> <span class="n">data_aug</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">subfunctions</span><span class="o">=</span><span class="n">sf</span><span class="p">,</span>
-                  <span class="n">prepare_subfunctions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">prepare_batches</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                  <span class="n">analysis</span><span class="o">=</span><span class="s2">&quot;patchwise-crop&quot;</span><span class="p">,</span> <span class="n">patch_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">160</span><span class="p">,</span><span class="mi">160</span><span class="p">))</span>
-</pre></div>
-</td></tr></table>
+pp = Preprocessor(data_io, data_aug=None, batch_size=2, subfunctions=sf,
+                  prepare_subfunctions=True, prepare_batches=False,
+                  analysis=&quot;patchwise-crop&quot;, patch_shape=(80,160,160))
+</code></pre>
 
 <hr />
               
@@ -272,7 +205,7 @@ Modus selection of analysis type. The analysis type will define how patches are 
   
 
   <hr/>
-
+  <p> <a href="/">Home</a> | <a href="/Install/">Installation</a> | <a href="/Usage/">Usage</a> | <a href="/Examples/">Examples</a> | <a href="/Credits/">Contact</a></p>
   <div role="contentinfo">
     <!-- Copyright etc -->
     
@@ -288,8 +221,10 @@ Modus selection of analysis type. The analysis type will define how patches are 
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/frankkramer-lab/MIScnn/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../Data-IO/" style="color: #fcfcfc;">&laquo; Previous</a></span>
@@ -302,6 +237,11 @@ Modus selection of analysis type. The analysis type will define how patches are 
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
