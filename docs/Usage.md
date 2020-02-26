@@ -179,4 +179,4 @@ visualize_evaluation(sample_list[80], img, seg, pred, "plot_directory/")
 -----------------------------------------------------------------
 
 For more detailed coding examples, check out the MIScnn wiki for
-[tutorials](https://github.com/frankkramer-lab/MIScnn/wiki/Tutorials) or [examples](https://github.com/frankkramer-lab/MIScnn/wiki/Examples).
+[tutorials](/Tutorials) or [examples](/Examples).

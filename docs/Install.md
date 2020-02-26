@@ -6,7 +6,7 @@ Commonly, you do not have to care about prerequisites because the package manage
 Therefore, if you have a higher Tensorflow or Keras version, please install the two modules manually with the correct version or in a separate package environment (e.g. with [Conda](https://docs.conda.io/en/latest/)).  
 
 MIScnn currently only supports Tensorflow 1.13 and Keras 2.2.4.  
-Keras install instructions: https://keras.io/#installation
+Keras install instructions: [https://keras.io/#installation](https://keras.io/#installation)
 
 ## MIScnn Installation
 
